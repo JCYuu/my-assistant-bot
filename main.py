@@ -7,6 +7,7 @@ load_dotenv()
 proxy_address = os.environ.get("PROXY_ADDR")
 proxy_username = os.environ.get("PROXY_USERNAME")
 proxy_pass = os.environ.get("PROXY_PASSWORD")
+
 use_proxy = proxy_address and proxy_username and proxy_pass
 
 api_id = int(os.environ.get("API_ID"))
