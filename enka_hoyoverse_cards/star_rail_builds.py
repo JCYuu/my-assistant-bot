@@ -14,7 +14,7 @@ asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
 async def main():
-    async with starrailcard.Card(proxy=f'http://{proxy_user}:{proxy_pass}@{proxy_addr}:3128', save=True, character_id='1220, 1112', boost_speed=True) as card:
+    async with starrailcard.Card(cache={"maxsize": 30},proxy=f'http://{proxy_user}:{proxy_pass}@{proxy_addr}:3128', save=True, character_id='1220, 1112', boost_speed=True) as card:
         print(card)
         
         data = await card.create(602286238, style=2)
